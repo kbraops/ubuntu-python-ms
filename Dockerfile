@@ -13,5 +13,6 @@ RUN apt-get update \
   && ACCEPT_EULA=Y apt-get -y install msodbcsql \
   && apt-get -y install unixodbc-dev \
   && apt-get -y install python-pip python-virtualenv \
+  && apt-get -y install locales \
   && locale-gen "en_US.UTF-8" \
   && dpkg-reconfigure locales
