@@ -15,4 +15,5 @@ RUN apt-get update \
   && apt-get -y install python-pip python-virtualenv \
   && apt-get -y install locales \
   && locale-gen "en_US.UTF-8" \
-  && dpkg-reconfigure locales
+  && dpkg-reconfigure --frontend=noninteractive locales \
+  && update-locale LANG=en_US.UTF-8
